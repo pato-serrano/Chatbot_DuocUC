@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
-
-<head>
+<html lang="es"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mentor Pro-Gemini | Duoc UC</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="">
     <div class="app-container">
         <!-- Sidebar -->
         <aside class="sidebar">
@@ -40,8 +38,7 @@
                         <p class="user-status">Online</p>
                     </div>
                 </div>
-                <div class="designer-credit"
-                    style="margin-top: 15px; font-size: 10px; color: var(--text-muted); line-height: 1.2;">
+                <div class="designer-credit" style="margin-top: 15px; font-size: 10px; color: var(--text-muted); line-height: 1.2;">
                     Diseño Patricio Serrano Venegas (Molecula AI)
                 </div>
             </div>
@@ -94,7 +91,7 @@
                     <div class="resource-icon">📖</div>
                     <h3>Manual de Prompt Engineering</h3>
                     <p>Aprende la estructura Rol + Tarea + Formato para obtener mejores resultados.</p>
-                    <a href="Guia_Prompt_Engineering_DuocUC.md" download class="resource-link">Descargar Guía</a>
+                    <a href="Guia_Prompt_Engineering_DuocUC.md" download="" class="resource-link">Descargar Guía</a>
                 </section>
                 <section class="resource-card">
                     <div class="resource-icon">🛠️</div>
@@ -142,6 +139,20 @@
 
                 <section class="settings-card">
                     <div class="settings-header">
+                        <span class="icon">🔑</span>
+                        <div class="settings-text">
+                            <h3>Clave de API Gemini</h3>
+                            <p>Configura tu llave para activar la IA en la web.</p>
+                        </div>
+                    </div>
+                    <div class="api-key-container">
+                        <input type="password" id="api-key-input" placeholder="AIzaSy...">
+                        <button id="save-key-btn" class="btn-primary-small">Guardar</button>
+                    </div>
+                </section>
+
+                <section class="settings-card">
+                    <div class="settings-header">
                         <span class="icon">ℹ️</span>
                         <div class="settings-text">
                             <h3>Sobre PromtAI</h3>
@@ -154,6 +165,4 @@
     </div>
     <script src="config.js"></script>
     <script src="app.js"></script>
-</body>
-
-</html>
+</body></html>
