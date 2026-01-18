@@ -3,9 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const userInput = document.getElementById('user-input');
     const messagesContainer = document.getElementById('chat-messages');
 
-    // CONFIGURACIÓN: Aquí irá tu API Key (Solicitarla al usuario si no existe)
-    // Para pruebas locales, puedes crear un archivo config.js con: const API_KEY = 'tu_llave';
-    let API_KEY = window.CONFIG?.API_KEY || "";
+    // CONFIGURACIÓN: Carga la llave desde config.js o localStorage
+    let API_KEY = window.CONFIG?.API_KEY || localStorage.getItem('gemini_api_key') || "";
 
     const getSystemPrompt = async () => {
         try {
@@ -19,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const callGeminiAPI = async (userText) => {
         if (!API_KEY) {
-            return "ERROR: No se ha detectado una API Key. Por favor, configúrala en el proyecto para activar el cerebro de la IA.";
+            return "ERROR: No se ha detectado una API Key. Por favor, ve a la sección de [Ajustes] y configura tu llave de Google AI Studio para activar el cerebro de la IA.";
         }
 
         const systemPrompt = await getSystemPrompt();
@@ -138,6 +137,25 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.remove('light-mode');
             themeLabel.textContent = "Modo Oscuro";
             localStorage.setItem('theme', 'dark');
+        }
+    });
+
+    // LÓGICA DE API KEY
+    const apiKeyInput = document.getElementById('api-key-input');
+    const saveKeyBtn = document.getElementById('save-key-btn');
+
+    if (API_KEY) {
+        apiKeyInput.value = API_KEY;
+    }
+
+    saveKeyBtn.addEventListener('click', () => {
+        const newKey = apiKeyInput.value.trim();
+        if (newKey) {
+            localStorage.setItem('gemini_api_key', newKey);
+            API_KEY = newKey;
+            alert('¡Llave de API guardada correctamente!');
+        } else {
+            alert('Por favor, ingresa una llave válida.');
         }
     });
 
