@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Pro-Gemini | Duoc UC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="logo-text">Duoc<span>UC</span></span>
+            </div>
+            <nav class="nav-menu">
+                <div class="nav-item active" data-target="chat-view">
+                    <span class="icon">💬</span>
+                    <span>Chat Mentor</span>
+                </div>
+                <div class="nav-item" data-target="resources-view">
+                    <span class="icon">📚</span>
+                    <span>Recursos</span>
+                </div>
+                <div class="nav-item" data-target="settings-view">
+                    <span class="icon">⚙️</span>
+                    <span>Ajustes</span>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar">E</div>
+                    <div class="user-info">
+                        <p class="user-name">Estudiante</p>
+                        <p class="user-status">Online</p>
+                    </div>
+                </div>
+                <div class="designer-credit"
+                    style="margin-top: 15px; font-size: 10px; color: var(--text-muted); line-height: 1.2;">
+                    Diseño Patricio Serrano Venegas (Molecula AI)
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="content-view active" id="chat-view">
+            <header class="chat-header">
+                <div class="header-info">
+                    <h1>PromtAI</h1>
+                    <p>IA de Apoyo Académico</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn-icon">⋮</button>
+                </div>
+            </header>
+
+            <div class="messages-container" id="chat-messages">
+                <div class="message mentor">
+                    <div class="message-content">
+                        ¡Hola! Soy PromtAI. ¿Sobre qué tema de ingeniería quieres que te cree un prompt de investigación
+                        profesional hoy?
+                    </div>
+                    <span class="message-time">Ahora</span>
+                </div>
+            </div>
+
+            <footer class="chat-footer">
+                <form id="chat-form" class="input-container">
+                    <input type="text" id="user-input" placeholder="Escribe el tema aquí..." autocomplete="off">
+                    <button type="submit" class="btn-send">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                        </svg>
+                    </button>
+                </form>
+            </footer>
+        </main>
+
+        <!-- Resources Area -->
+        <main class="content-view" id="resources-view">
+            <header class="chat-header">
+                <div class="header-info">
+                    <h1>Recursos PromtAI</h1>
+                    <p>Guías y Enlaces para tu Aprendizaje</p>
+                </div>
+            </header>
+            <div class="resources-container">
+                <section class="resource-card">
+                    <div class="resource-icon">📖</div>
+                    <h3>Manual de Prompt Engineering</h3>
+                    <p>Aprende la estructura Rol + Tarea + Formato para obtener mejores resultados.</p>
+                    <a href="Guia_Prompt_Engineering_DuocUC.md" download class="resource-link">Descargar Guía</a>
+                </section>
+                <section class="resource-card">
+                    <div class="resource-icon">🛠️</div>
+                    <h3>Bibliotecas de IA</h3>
+                    <p>Accede directamente a los motores de búsqueda de IA más potentes.</p>
+                    <div class="link-grid">
+                        <a href="https://aistudio.google.com/" target="_blank">Google AI Studio</a>
+                        <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>
+                    </div>
+                </section>
+                <section class="resource-card">
+                    <div class="resource-icon">🏫</div>
+                    <h3>Biblioteca Duoc UC</h3>
+                    <p>Busca bibliografía técnica para complementar tus investigaciones.</p>
+                    <a href="https://www.duoc.cl/biblioteca/" target="_blank" class="resource-link">Ir a Biblioteca</a>
+                </section>
+            </div>
+        </main>
+
+        <!-- Settings Area -->
+        <main class="content-view" id="settings-view">
+            <header class="chat-header">
+                <div class="header-info">
+                    <h1>Ajustes de PromtAI</h1>
+                    <p>Personaliza tu experiencia de usuario</p>
+                </div>
+            </header>
+            <div class="settings-container">
+                <section class="settings-card">
+                    <div class="settings-header">
+                        <span class="icon">🌓</span>
+                        <div class="settings-text">
+                            <h3>Tema del Sistema</h3>
+                            <p>Cambia entre el modo oscuro y el modo claro.</p>
+                        </div>
+                    </div>
+                    <div class="theme-switch-container">
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                        <span id="theme-label">Modo Oscuro</span>
+                    </div>
+                </section>
+
+                <section class="settings-card">
+                    <div class="settings-header">
+                        <span class="icon">ℹ️</span>
+                        <div class="settings-text">
+                            <h3>Sobre PromtAI</h3>
+                            <p>Versión 1.2.0 - Enfocada en Ingeniería de Prompts.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
