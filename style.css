@@ -256,6 +256,42 @@ body {
     font-weight: 600;
 }
 
+.api-key-container {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    justify-content: flex-end;
+    margin-left: 20px;
+}
+
+#api-key-input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: white;
+    font-size: 13px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.btn-primary-small {
+    background: var(--secondary-color);
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary-small:hover {
+    background: #e5c104;
+    transform: scale(1.02);
+}
+
 /* Switch Toggle Styling */
 .switch {
     position: relative;
