@@ -1,1 +1,9 @@
-config.js
+# Archivos de configuracion local (no subir a GitHub)
+.env
+
+# Dependencias (si usaras Node.js)
+node_modules/
+
+# Archivos temporales de sistema
+.DS_Store
+Thumbs.db
