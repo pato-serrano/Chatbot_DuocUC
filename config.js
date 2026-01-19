@@ -1,3 +1,3 @@
 window.CONFIG = {
-      API_KEY: "AIzaSyAb25EO5j9iwxhwSFVNxT2KfJSuH5pzp0Q"
+      API_KEY: "AIzaSyAGMJxLGsvBauR_ADwb9sdEVzQRq_TlnZ0"
 };
